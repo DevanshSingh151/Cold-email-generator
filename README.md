@@ -77,39 +77,9 @@ vectorstore/       # ChromaDB persistence (auto-created)
 ## 🔑 Environment Variables
 - `GROQ_API_KEY` – required to call Groq models
 
----
-
-## 📦 Deployment
-
-### Deploy on Render (recommended for Streamlit)
-This repo includes `render.yaml` and `Procfile` for one-click deploy.
-
 Steps:
 1. Push this repo to GitHub
-2. Create a new Web Service on Render from your repo
-3. Render will detect `render.yaml` and configure the service
-4. Add `GROQ_API_KEY` in Render Dashboard → Environment
-
-Files used:
-- `render.yaml` – service definition
-- `Procfile` – how to start the Streamlit server
-
-### Deploy on Vercel (via Docker)
-Streamlit is a persistent web server, which doesn’t fit Vercel Serverless functions. Use Vercel’s Docker deployment instead. This repo includes a `Dockerfile` and `vercel.json` wired for Docker.
-
-Steps:
-1. Ensure the Dockerfile suits your Python version
-2. Push to GitHub
-3. Import the repo on Vercel and select “Use Dockerfile” (or Vercel will auto-detect it)
-4. Set `GROQ_API_KEY` in Vercel Project → Settings → Environment Variables
-
-Files used:
-- `Dockerfile` – container that runs Streamlit
-- `vercel.json` – hints to use Docker
-
-Note: Vercel Docker deployments may require a Pro plan. If you prefer a free/quick path, use Render or Streamlit Community Cloud.
-
----
+2. Add `GROQ_API_KEY` in Render Dashboard → Environment
 
 ## 🧪 Local Tips
 - If ChromaDB directory doesn’t exist, it will be initialized on first run
@@ -127,8 +97,6 @@ streamlit run app/main.py --server.port 8501 --server.address 0.0.0.0
 
 ---
 
-## 📄 License
-MIT
 
 
 # Cold-email-generator
